@@ -18,13 +18,13 @@ class Tab extends BaseTab
 
     public function registerAssets()
     {
-        $this->script('igntion-git', __DIR__.'/../dist/js/tab.js');
+        $this->script('ignition-git', __DIR__.'/../dist/js/tab.js');
     }
 
     public function meta(): array
     {
         return [
-            'title' => $this->name(),
+            'title'     => $this->name()
         ];
     }
 }
