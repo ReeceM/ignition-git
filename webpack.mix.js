@@ -1,3 +1,3 @@
 let mix = require('laravel-mix')
 
-mix.js('resources/js/tab.js', 'dist/js');
+mix.js('resources/js/tab.js', 'public/js');

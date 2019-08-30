@@ -8,17 +8,17 @@ class Tab extends BaseTab
 {
     public function name(): string
     {
-        return ':tab_name';
+        return 'Open Issue';
     }
 
     public function component(): string
     {
-        return ':package_name';
+        return 'ignition-git';
     }
 
     public function registerAssets()
     {
-        $this->script(':package_name', __DIR__.'/../dist/js/tab.js');
+        $this->script('igntion-git', __DIR__.'/../dist/js/tab.js');
     }
 
     public function meta(): array
