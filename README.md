@@ -20,6 +20,15 @@ composer require reecem/ignition-git
 
 ## Usage
 
+1. Generate a new OAuth Token for your account 
+    - on GitHub [GitHub Personal Tokens](https://github.com/settings/tokens) (Only need to tick repo access !!)
+    - on Gitlab [Gitlab Personal Token](https://gitlab.com/profile/personal_access_tokens) (Only give repo access to write)
+    - ? others... PR pls
+
+2. Add the token to you environment with `IGNITION_GIT_TOKEN="token_me_here"`
+
+3. Make an error somewhere 
+
 Click on the "Open Issue" tab on your Ignition screen to see the tool provided by this package.
 
 Once there edit the data and click submit :)
@@ -40,7 +49,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email ziggyelec@gmail.com instead of using the issue tracker.
 
 ## Credits
 
