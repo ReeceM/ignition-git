@@ -1,17 +1,17 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "reecem/ignition-git",
+    "description": "Open a Github, Gitlab Issue from Error page ",
     "keywords": [
         "laravel",
         "flare",
         "ignition"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/ReeceM/ignition-git",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Reece May",
+            "email": "ziggyelec@gmail.com",
             "role": "Developer"
         }
     ],
@@ -25,18 +25,18 @@
     },
     "autoload": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tab_name\\": "src/"
+            "ReeceM\\GitTab\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tab_name\\Tests\\": "tests"
+            "ReeceM\\GitTab\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                ":namespace_vendor\\:namespace_tab_name\\TabServiceProvider"
+                "ReeceM\\GitTab\\TabServiceProvider"
             ]
         }
     },
