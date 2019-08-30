@@ -1,11 +1,11 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name;
+namespace ReeceM\GitTab;
 
 use Facade\Ignition\Ignition;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use :namespace_vendor\:namespace_tab_name\Http\Middleware\Authorize;
+use ReeceM\GitTab\Http\Middleware\Authorize;
 
 class TabServiceProvider extends ServiceProvider
 {

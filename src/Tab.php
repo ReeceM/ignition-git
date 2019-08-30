@@ -1,6 +1,6 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name;
+namespace ReeceM\GitTab;
 
 use Facade\Ignition\Tabs\Tab as BaseTab;
 

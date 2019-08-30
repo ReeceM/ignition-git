@@ -1,10 +1,10 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name\Tests;
+namespace ReeceM\GitTab\Tests;
 
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
-use :namespace_vendor\:namespace_tab_name\TabServiceProvider;
+use ReeceM\GitTab\TabServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
