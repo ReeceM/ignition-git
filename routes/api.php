@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('endpoint', \ReeceM\GitTab\Http\Controllers\TabController::class . '@index');
+Route::post('open', \ReeceM\GitTab\Http\Controllers\TabController::class . '@open');

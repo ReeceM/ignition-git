@@ -1,7 +1,7 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file
+All notable changes to `ignition-git` will be documented in this file
 
-## 1.0.0 - 2018-XX-XX
+## 1.0.0 - 2019-08-31
 
 - initial release

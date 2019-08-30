@@ -33,7 +33,7 @@ class TabServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::prefix('ignition-vendor/:vendor/:package_name')
+        Route::prefix('ignition-vendor/reecem/ignition-git')
                 ->group(__DIR__.'/../routes/api.php');
     }
 
