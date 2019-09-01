@@ -6,7 +6,7 @@ class GitRepos
 {
 	// no tailing slash
 	public const GITHUB = "https://api.github.com/repos";
-	public const GITLAB = "https://gitlab.com/api/v4/issues";
+	public const GITLAB = "https://gitlab.com/api/v4/projects";
 
 	/**
 	 * the repos relations.
@@ -78,8 +78,12 @@ class GitRepos
 	public function getPath()
 	{
 		$github = $this->repo[3] == 'github.com';
+		if(! $github) {
+			
+			return sprintf("%s/%s/issues", $this->getBaseUrl() , $this->repo[5]);
+		}
 
-		return sprintf("%s/%s/%s", $this->getBaseUrl() , $this->repo[4], $this->repo[5]) . ($github ? '/issues' : '');
+		return sprintf("%s/%s/%s/issues", $this->getBaseUrl() , $this->repo[4], $this->repo[5]);
 	}
 
 	/**
