@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git)
 [![Build Status](https://img.shields.io/travis/reecem/ignition-git/master.svg?style=flat-square)](https://travis-ci.org/reecem/ignition-git)
-[![Quality Score](https://img.shields.io/scrutinizer/g/reecem/ignition-git.svg?style=flat-square)](https://scrutinizer-ci.com/g/reecem/ignition-git)
+<!-- [![Quality Score](https://img.shields.io/scrutinizer/g/reecem/ignition-git.svg?style=flat-square)](https://scrutinizer-ci.com/g/reecem/ignition-git) -->
 [![Total Downloads](https://img.shields.io/packagist/dt/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git)
 
 
@@ -17,6 +17,14 @@ You can install the package in to a Laravel app that uses [Ignition](https://fla
 ```bash
 composer require reecem/ignition-git
 ```
+
+If you would like to edit the configs you can publish the service provider
+
+```bash
+php artisan vendor:publish --tag=ignition-git
+```
+You can then see the base template for the issue, you can edit it, the thins between `:   :` are the strings replace. 
+(More complex thing coming)
 
 ## Usage
 
