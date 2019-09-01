@@ -5,6 +5,7 @@ php:
   - 7.2
 
 env:
+  # fast_finish: true
   matrix:
     - COMPOSER_FLAGS=""
     - COMPOSER_FLAGS="--prefer-lowest"

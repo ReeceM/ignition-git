@@ -1,14 +1,14 @@
-# Open A New Issue from an Ignition Tab
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/ReeceM/ignition-git)
+[![Latest Version on Packagist](https://poser.pugx.org/reecem/ignition-git/v/stable)](https://packagist.org/packages/ReeceM/ignition-git)
 [![Build Status](https://img.shields.io/travis/ReeceM/ignition-git/master.svg?style=flat-square)](https://travis-ci.com/ReeceM/ignition-git)
+[![CloudCov](https://codecov.io/gh/ReeceM/ignition-git/branch/master/graph/badge.svg)](https://codecov.io/ReeceM/ignition-git)
+[![Total Downloads](https://poser.pugx.org/reecem/ignition-git/downloads)](https://packagist.org/packages/reecem/ignition-git)
 <!-- [![Quality Score](https://img.shields.io/scrutinizer/g/reecem/ignition-git.svg?style=flat-square)](https://scrutinizer-ci.com/g/reecem/ignition-git) -->
-[![Total Downloads](https://img.shields.io/packagist/dt/ReeceM/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git)
 
 
 This package adds the ability to open a new issue from your ignition tab and edit the data that would be set for the issue
 
-![Screenshot of ignition git tab](https://reecem.github.io/ignition-git-tab/screenshot.png)
+![Screenshot of ignition git tab](https://reecem.github.io/ignition-git/screenshot.png)
 
 ## Installation
 

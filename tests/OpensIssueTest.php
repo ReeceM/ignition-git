@@ -2,8 +2,8 @@
 
 namespace ReeceM\GitTab\Tests;
 
-// use Facade\ReeceM\GitTab\Actions\OpenIssueAction;
-// use Mockery\Mock;
+use Mockery;
+use ReeceM\GitTab\Actions\OpenIssueAction;
 use ReeceM\GitTab\IgnitionGitTab;
 use ReeceM\GitTab\Tests\TestCase;
 
@@ -28,16 +28,19 @@ class OpensIssueTest extends TestCase
             'title' => 'Issue',
             'body' => '**Test**'
         ];
+        $mocked = Mockery::mock(OpenIssueAction::class);
 
-        $response = OpenIssueAction::shouldReceive('execute')
-                                    ->once()
-                                    ->with($mockData)
-                                    ->andReturn([
-                                        'message'   => 'Issue Opened',
-                                        'result'    => ['state' => 'open'],
-                                        'code'      => 201
-                                    ]);
-        //
+        $mocked->shouldReceive('execute')
+                ->once()
+                // ->with($mockData)
+                ->andReturn([
+                    'message'   => 'Issue Opened',
+                    'result'    => ['state' => 'open'],
+                    'code'      => 201
+                ]);
+        
+        $response = $mocked->execute($mockData);
+
         $this->assertEquals(201, $response['code']);
     }
 }
