@@ -1,7 +1,7 @@
 
 [![Latest Version on Packagist](https://poser.pugx.org/reecem/ignition-git/v/stable)](https://packagist.org/packages/ReeceM/ignition-git)
 [![Build Status](https://img.shields.io/travis/ReeceM/ignition-git/master.svg?style=flat-square)](https://travis-ci.com/ReeceM/ignition-git)
-[![CloudCov](https://codecov.io/gh/ReeceM/ignition-git/branch/master/graph/badge.svg)](https://codecov.io/ReeceM/ignition-git)
+[![codecov](https://codecov.io/gh/ReeceM/ignition-git/branch/master/graph/badge.svg)](https://codecov.io/gh/ReeceM/ignition-git)
 [![Total Downloads](https://poser.pugx.org/reecem/ignition-git/downloads)](https://packagist.org/packages/reecem/ignition-git)
 <!-- [![Quality Score](https://img.shields.io/scrutinizer/g/reecem/ignition-git.svg?style=flat-square)](https://scrutinizer-ci.com/g/reecem/ignition-git) -->
 
