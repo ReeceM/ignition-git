@@ -15,7 +15,7 @@ This package adds the ability to open a new issue from your ignition tab and edi
 You can install the package in to a Laravel app that uses [Ignition](https://flareapp.io) via composer:
 
 ```bash
-composer require reecem/ignition-git-tab
+composer require reecem/ignition-git
 ```
 
 If you would like to edit the configs you can publish the service provider
