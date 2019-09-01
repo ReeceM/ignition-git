@@ -16,11 +16,13 @@ class TabServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->booted(function () {
+        // $this->app->booted(function () {
             $this->routes();
-        });
+            $this->handlePublishing();
+            $this->registerConfig();
+        // });
 
-        Ignition::tab(app(Tab::class));
+        Ignition::tab(app(IgnitionGitTab::class));
     }
 
     protected function routes()
@@ -45,5 +47,37 @@ class TabServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    /**
+     * Registers the applications config file and/or exports it
+     */
+    protected function registerConfig()
+    {
+        
+        if (!config('app.debug')) {
+            return;
+        }
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/ignition-git.php',
+            'ignition-git'
+        );
+    }
+
+    /**
+     * Register the package's publishable resources.
+     *
+     * @return void
+     */
+    private function handlePublishing()
+    {
+        if ($this->app->runningInConsole()) {
+            
+            $this->publishes([
+                __DIR__ . '/../config/ignition-git.php' => config_path('ignition-git.php'),
+            ], 'ignition-git');
+
+        }
     }
 }

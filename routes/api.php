@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('endpoint', \ReeceM\GitTab\Http\Controllers\TabController::class . '@index');
-Route::post('open', \ReeceM\GitTab\Http\Controllers\TabController::class . '@open');
+Route::post('open-issue', \ReeceM\GitTab\Http\Controllers\OpenIssueController::class);
+
+Route::get('template/{template}', \ReeceM\GitTab\Http\Controllers\TemplateController::class);

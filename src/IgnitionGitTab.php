@@ -4,11 +4,23 @@ namespace ReeceM\GitTab;
 
 use Facade\Ignition\Tabs\Tab as BaseTab;
 
-class Tab extends BaseTab
+class IgnitionGitTab extends BaseTab
 {
+    /**
+     * Tab Version.
+     * 
+     * @var string VERSION
+     */
+    public const VERSION = '0.1.0';
+
     public function name(): string
     {
         return 'Open Issue';
+    }
+
+    public function description(): string
+    {
+        return 'Opens an issue on the selected repository';
     }
 
     public function component(): string
@@ -24,7 +36,9 @@ class Tab extends BaseTab
     public function meta(): array
     {
         return [
-            'title'     => $this->name()
+            'title'         => $this->name(),
+            'description'   => $this->description(),
+            'version'       => self::VERSION
         ];
     }
 }
