@@ -40,17 +40,17 @@ class GitRepos
 	/**
 	 * gets the relative auth header.
 	 * 
-	 * @return string
+	 * @return array
 	 */
-	public function getAuthHeaders()
-	{ 
-		$token = config('ignition.git.token');
+	public function getAuthHeaders(): array
+	{
+		$token = config('ignition-git.token');
 
 		if ($this->repo[3] == 'gitlab.com') {
-			return "Private-Token: {$token}";
+			return ['PRIVATE-TOKEN' => $token];
 		}
 
-		return "token {$token}";
+		return ['Authorization' => "token {$token}"];
 	}
 
 	/**
@@ -63,11 +63,11 @@ class GitRepos
 	public function splitUrl($url)
 	{
 		$this->repo = preg_split(
-						'/(^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$)/', /* https://serverfault.com/a/917253 */
-						$url, 
-						-1, 
-						PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE
-					);
+			'/(^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$)/', /* https://serverfault.com/a/917253 */
+			$url,
+			-1,
+			PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE
+		);
 	}
 
 	/**
@@ -78,12 +78,14 @@ class GitRepos
 	public function getPath()
 	{
 		$github = $this->repo[3] == 'github.com';
-		if(! $github) {
-			
-			return sprintf("%s/%s/issues", $this->getBaseUrl() , $this->repo[5]);
+		if (!$github) {
+
+			$project = $this->repo[4] . '%2F' . $this->repo[5];
+
+			return sprintf("%s/%s/issues", $this->getBaseUrl(), $project);
 		}
 
-		return sprintf("%s/%s/%s/issues", $this->getBaseUrl() , $this->repo[4], $this->repo[5]);
+		return sprintf("%s/%s/%s/issues", $this->getBaseUrl(), $this->repo[4], $this->repo[5]);
 	}
 
 	/**
@@ -95,6 +97,4 @@ class GitRepos
 	{
 		return $this->repos[$this->repo[3]] ?? $this->repos['github.com'];
 	}
-
-
 }

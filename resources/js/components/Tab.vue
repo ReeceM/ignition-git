@@ -117,7 +117,7 @@
 
             openIssue() {
                 axios.post(path + '/open-issue', {
-                        title: this.report.exception_class,
+                        title: this.report.message,
                         body: this.markdown,
                         git: this.git
                     })
@@ -146,8 +146,13 @@
                         /**
                          * @todo clean this style of editing the thing up
                          */
-                        data = data.replace(':title:', `Exception Occurred: ${this.report.exception_class}`);
-                        data = data.replace(':exception_message:', this.report.message);
+                        let message = `
+                        ${this.report.exception_class}
+
+                        ${this.report.message}
+                        `
+                        data = data.replace(':title:', `Exception Occurred: ${this.report.message}`);
+                        data = data.replace(':exception_message:', message);
                         data = data.replace(':stacktrace:', JSON.stringify(this.report.stacktrace));
                         data = data.replace(':commit_sha:', this.git.hash);
                         data = data.replace(':hash_url:', this.commitUrl);

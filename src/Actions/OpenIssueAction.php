@@ -88,12 +88,15 @@ class OpenIssueAction
     {
         $userAgent  = sprintf("Ignition Git Tab/%s (github.com/ReeceM/ignition-git)", IgnitionGitTab::VERSION);
 
-        return [
+        $headers = [
             'headers' => [
                 'User-Agent' => $userAgent,
-                'Authorization' => $this->gitRepos->getAuthHeaders(),
                 'Content-Type' => 'application/json'
-            ]
-        ];
+                ]
+            ];
+        
+        $headers['headers'] = array_merge($headers['headers'], $this->gitRepos->getAuthHeaders());
+
+        return $headers;
     }
 }

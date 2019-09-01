@@ -26,7 +26,7 @@ class GitRepoTests extends TestCase
         $gitRepos = new GitRepos('https://gitlab.com/ReeceM/ignition-git.git');
 
         return $this->assertEquals(
-            "https://gitlab.com/api/v4/projects/ignition-git/issues",
+            "https://gitlab.com/api/v4/projects/ReeceM%2Fignition-git/issues",
             $gitRepos->name(),
             'URL not the expected one'
         );
