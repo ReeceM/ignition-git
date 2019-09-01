@@ -1,7 +1,7 @@
 # Open A New Issue from an Ignition Tab
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git)
-[![Build Status](https://img.shields.io/travis/reecem/ignition-git/master.svg?style=flat-square)](https://travis-ci.org/reecem/ignition-git)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git-tab)
+[![Build Status](https://img.shields.io/travis/reecem/ignition-git/master.svg?style=flat-square)](https://travis-ci.org/reecem/ignition-git-tab)
 <!-- [![Quality Score](https://img.shields.io/scrutinizer/g/reecem/ignition-git.svg?style=flat-square)](https://scrutinizer-ci.com/g/reecem/ignition-git) -->
 [![Total Downloads](https://img.shields.io/packagist/dt/reecem/ignition-git.svg?style=flat-square)](https://packagist.org/packages/reecem/ignition-git)
 
@@ -15,7 +15,7 @@ This package adds the ability to open a new issue from your ignition tab and edi
 You can install the package in to a Laravel app that uses [Ignition](https://flareapp.io) via composer:
 
 ```bash
-composer require reecem/ignition-git
+composer require reecem/ignition-git-tab
 ```
 
 If you would like to edit the configs you can publish the service provider
