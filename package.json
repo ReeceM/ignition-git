@@ -11,11 +11,15 @@
         "format": "prettier --single-quote --write 'resources/**/*.{css,js,vue}'"
     },
     "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^1.2.0",
         "cross-env": "^5.0.0",
-        "laravel-mix": "^1.0",
+        "laravel-mix": "^3.0.0",
         "prettier": "^1.14.0"
     },
     "dependencies": {
+        "axios": "^0.19.0",
+        "git-url-parse": "^11.1.2",
+        "tailwindcss": "^1.1.2",
         "vue": "^2.5.0"
     }
 }

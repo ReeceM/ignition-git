@@ -21,6 +21,7 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
+        "nunomaduro/phpinsights": "^1.9",
         "orchestra/testbench": "^3.8",
         "phpunit/phpunit": "^8.0"
     },
@@ -43,6 +44,11 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "style": "@phpcs --standard=PSR2 --extensions=php --colors src"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
