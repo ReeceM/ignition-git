@@ -16,7 +16,9 @@ return [
 
 The following exception occurred:
 
-`:exception_message:`
+```
+:exception_message:
+```
 
 This issue was introduced after the following commit: [:commit_sha:](:hash_url:)
 

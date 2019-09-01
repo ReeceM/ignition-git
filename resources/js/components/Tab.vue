@@ -146,7 +146,7 @@
                         /**
                          * @todo clean this style of editing the thing up
                          */
-                        data = data.replace(':title:', `Exception Occured in: ${this.report.exception_class}`);
+                        data = data.replace(':title:', `Exception Occurred: ${this.report.exception_class}`);
                         data = data.replace(':exception_message:', this.report.message);
                         data = data.replace(':stacktrace:', JSON.stringify(this.report.stacktrace));
                         data = data.replace(':commit_sha:', this.git.hash);

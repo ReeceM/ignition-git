@@ -8,7 +8,7 @@
 
 This package adds the ability to open a new issue from your ignition tab and edit the data that would be set for the issue
 
-[Screenshot comming....]
+![Screenshot of ignition git tab](https://reecem.github.io/ignition-git/screenshot.png)
 
 ## Installation
 
